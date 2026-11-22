@@ -1,0 +1,21 @@
+[package]
+name = "nazar-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "The nazar command-line tool."
+
+[[bin]]
+name = "nazar"
+path = "src/main.rs"
+
+[dependencies]
+nazar-core.workspace = true
+nazar-store.workspace = true
+nazar-windows.workspace = true
+clap.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true

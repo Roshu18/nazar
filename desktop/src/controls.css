@@ -1,0 +1,77 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: var(--control-height);
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-fill);
+  font: var(--text-callout);
+  white-space: nowrap;
+  cursor: default;
+  transition:
+    background var(--duration-faster) linear,
+    transform var(--duration-faster) var(--ease-enter),
+    opacity var(--duration-fast) linear;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--color-fill-hover);
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.button:disabled {
+  opacity: 0.45;
+}
+
+.button-primary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 600;
+}
+
+.button-primary:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
+.button-destructive {
+  background: var(--color-destructive-fill);
+  color: var(--color-destructive);
+  font-weight: 600;
+}
+
+.button-destructive:hover:not(:disabled) {
+  background: var(--color-destructive-fill-hover);
+}
+
+.icon-button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-small);
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: default;
+  transition: background var(--duration-faster) linear;
+}
+
+.icon-button:hover {
+  background: var(--color-fill);
+  color: var(--color-text);
+}
+
+.checkbox {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--color-accent);
+}

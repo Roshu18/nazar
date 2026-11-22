@@ -1,0 +1,58 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/nazar-core",
+    "crates/nazar-store",
+    "crates/nazar-windows",
+    "crates/nazar-cli",
+    "desktop/src-tauri",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Tracks everything a program changes on Windows and puts it back."
+
+[workspace.dependencies]
+nazar-core = { path = "crates/nazar-core" }
+nazar-store = { path = "crates/nazar-store" }
+nazar-windows = { path = "crates/nazar-windows" }
+clap = { version = "4", features = ["derive"] }
+ferrisetw = "1.2"
+png = "0.18"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+winreg = "0.56"
+windows = { version = "0.57", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Com",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_System_Registry",
+    "Win32_System_Threading",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+unused_must_use = "deny"
+
+[workspace.lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+module_name_repetitions = "allow"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

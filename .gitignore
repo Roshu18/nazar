@@ -1,0 +1,7 @@
+/target
+/.playwright-mcp
+node_modules
+/desktop/dist
+/desktop/src-tauri/gen
+CLAUDE.md
+docs/

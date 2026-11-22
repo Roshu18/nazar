@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light dark;
+
+  --font-family: "Inter Variable", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --text-caption: 400 12px/16px var(--font-family);
+  --text-callout: 500 13px/18px var(--font-family);
+  --text-body: 400 14px/20px var(--font-family);
+  --text-body-strong: 600 14px/20px var(--font-family);
+  --text-headline: 600 15px/20px var(--font-family);
+  --text-subtitle: 600 20px/26px var(--font-family);
+  --text-title: 700 28px/34px var(--font-family);
+  --tracking-text: -0.006em;
+  --tracking-title: -0.021em;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --control-height: 32px;
+  --row-height: 32px;
+  --navigation-item-height: 52px;
+  --location-row-height: 56px;
+  --tree-indentation: 16px;
+  --icon-size: 16px;
+  --navigation-width: 288px;
+  --radius-small: 6px;
+  --radius-control: 8px;
+  --radius-surface: 12px;
+  --radius-pill: 999px;
+
+  --duration-faster: 83ms;
+  --duration-fast: 167ms;
+  --duration-normal: 250ms;
+  --ease-enter: cubic-bezier(0, 0, 0, 1);
+  --ease-exit: cubic-bezier(1, 0, 1, 1);
+
+  --color-window: #f5f5f7;
+  --color-content: rgb(255 255 255 / 72%);
+  --color-card: rgb(255 255 255 / 90%);
+  --color-stroke: rgb(0 0 0 / 8%);
+  --color-divider: rgb(60 60 67 / 14%);
+  --color-hover: rgb(120 120 128 / 10%);
+  --color-selected: rgb(120 120 128 / 18%);
+  --color-fill: rgb(120 120 128 / 14%);
+  --color-fill-hover: rgb(120 120 128 / 22%);
+  --color-text: #1d1d1f;
+  --color-text-secondary: rgb(60 60 67 / 76%);
+  --color-accent: #0071e3;
+  --color-accent-hover: #0077ed;
+  --color-accent-text: #0066cc;
+  --color-on-accent: #ffffff;
+  --color-destructive: #d70015;
+  --color-destructive-fill: rgb(255 59 48 / 12%);
+  --color-destructive-fill-hover: rgb(255 59 48 / 20%);
+  --color-created: #248a3d;
+  --color-changed: #b25000;
+  --color-deleted: #d70015;
+  --color-scrollbar: rgb(0 0 0 / 24%);
+  --color-backdrop: rgb(0 0 0 / 28%);
+  --shadow-raised: 0 1px 2px rgb(0 0 0 / 14%);
+  --shadow-dialog: 0 24px 64px rgb(0 0 0 / 24%);
+  --shadow-menu: 0 8px 24px rgb(0 0 0 / 16%);
+  --color-menu: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-window: #1e1e1e;
+    --color-content: rgb(255 255 255 / 3.5%);
+    --color-card: rgb(255 255 255 / 5.5%);
+    --color-stroke: rgb(255 255 255 / 9%);
+    --color-divider: rgb(255 255 255 / 9%);
+    --color-hover: rgb(255 255 255 / 6%);
+    --color-selected: rgb(255 255 255 / 11%);
+    --color-fill: rgb(120 120 128 / 28%);
+    --color-fill-hover: rgb(120 120 128 / 40%);
+    --color-text: #f5f5f7;
+    --color-text-secondary: rgb(235 235 245 / 62%);
+    --color-accent: #0071e3;
+    --color-accent-hover: #1a82f0;
+    --color-accent-text: #2997ff;
+    --color-on-accent: #ffffff;
+    --color-destructive: #ff453a;
+    --color-destructive-fill: rgb(255 69 58 / 16%);
+    --color-destructive-fill-hover: rgb(255 69 58 / 26%);
+    --color-created: #30d158;
+    --color-changed: #ff9f0a;
+    --color-deleted: #ff453a;
+    --color-scrollbar: rgb(255 255 255 / 24%);
+    --color-backdrop: rgb(0 0 0 / 48%);
+    --shadow-raised: 0 1px 2px rgb(0 0 0 / 40%);
+    --shadow-dialog: 0 24px 64px rgb(0 0 0 / 56%);
+    --shadow-menu: 0 8px 24px rgb(0 0 0 / 48%);
+    --color-menu: #2c2c2e;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar) transparent;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font: var(--text-body);
+  letter-spacing: var(--tracking-text);
+  color: var(--color-text);
+  background: var(--color-window);
+  cursor: default;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.has-mica body {
+  background: transparent;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-text);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}

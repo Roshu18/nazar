@@ -1,0 +1,22 @@
+[package]
+name = "nazar-desktop"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "The Nazar desktop app."
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+nazar-core.workspace = true
+nazar-store.workspace = true
+nazar-windows.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tauri = { version = "2", features = ["image-png"] }
+tauri-plugin-dialog = "2"
+thiserror.workspace = true
+
+[lints]
+workspace = true

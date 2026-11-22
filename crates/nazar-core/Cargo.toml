@@ -1,0 +1,15 @@
+[package]
+name = "nazar-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Pure tracking logic for Nazar: attribution, net-effect folding, manifests and removal plans."
+
+[dependencies]
+serde.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+
+[lints]
+workspace = true

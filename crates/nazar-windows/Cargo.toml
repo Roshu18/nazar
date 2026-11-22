@@ -1,0 +1,17 @@
+[package]
+name = "nazar-windows"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Windows adapters for Nazar: kernel event tracing, volume names, process list and elevation."
+
+[dependencies]
+nazar-core.workspace = true
+ferrisetw.workspace = true
+png.workspace = true
+thiserror.workspace = true
+windows.workspace = true
+winreg.workspace = true
+
+[lints]
+workspace = true
